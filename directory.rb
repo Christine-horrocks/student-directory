@@ -25,7 +25,7 @@ def input_students
     puts "Now we have #{students.count} students"
     name = gets.chomp
     end
-    
+
     students
 end
 
@@ -35,8 +35,8 @@ def print_header
 end
 
 def student_list(names)
-  names.each do |name|
-    puts "#{name[:name]} (#{name[:cohort]} cohort)"
+  names.each.with_index(1) do |name, i|
+    puts " #{i}. #{name[:name]} (#{name[:cohort]} cohort)"
   end
 end
 
