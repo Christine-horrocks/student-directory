@@ -1,17 +1,17 @@
 
 #Adding an array containg the students
 students = [
-            "Dr. Hannibal Lecter",
-            "Darth Vader",
-            "Nurse Ratched",
-            "Micheal Corleone",
-            "Alex DeLarge",
-            "The Wicked Witch of the West",
-            "Terminator",
-            "Freddy Krueger",
-            "The Joker",
-            "Joffrey Baratheon",
-            "Norman Bates"
+            {name: "Dr. Hannibal Lecter", cohort: :November},
+            {name: "Darth Vader", cohort: :November},
+            {name: "Nurse Ratched", cohort: :November},
+            {name: "Micheal Corleone", cohort: :November},
+            {name: "Alex DeLarge", cohort: :November},
+            {name: "The Wicked Witch of the West", cohort: :November},
+            {name: "Terminator", cohort: :November},
+            {name: "Freddy Krueger", cohort: :November},
+            {name: "The Joker", cohort: :November},
+            {name: "Joffrey Baratheon", cohort: :November},
+            {name: "Norman Bates", cohort: :November}
 ]
 
 def print_header
@@ -21,7 +21,7 @@ end
 
 def student_list(names)
   names.each do |name|
-    puts name
+    puts "#{name[:name]} (#{name[:cohort]} cohort)"
   end
 end
 
