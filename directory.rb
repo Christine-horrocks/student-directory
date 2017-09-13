@@ -26,16 +26,19 @@ def input_students
     name = gets.chomp
     end
 
-    students
+  students
+
 end
+
 
 def print_header
   puts "The students of the Villains Academey"
   puts "-------------"
 end
 
+
 def student_list(names)
-  names.each.with_index(1) do |name, i|
+    names.each.with_index(1) do |name, i|
     puts " #{i}. #{name[:name]} (#{name[:cohort]} cohort)"
   end
 end
