@@ -60,14 +60,10 @@ def show_students
 end
 
 
-def save_students
-  file = File.open("students.csv", "w")
-  @students.each do |student|
-      student_data = [student[:name], student[:cohort]]
-      csv_line = student_data.join(",")
-      file.puts csv_line
-    end
-    file.close
+def student_list
+  @students.each.with_index(1) do |name, i|
+  puts " #{i}. #{name[:name]} (#{name[:cohort]} cohort)"
+  end
 end
 
 
@@ -77,15 +73,19 @@ def print_header
 end
 
 
-def student_list
-  @students.each.with_index(1) do |name, i|
-  puts " #{i}. #{name[:name]} (#{name[:cohort]} cohort)"
-  end
+def print_footer
+  puts "Overall, we have #{@students.count} great students"
 end
 
 
-def print_footer
-  puts "Overall, we have #{@students.count} great students"
+def save_students
+  file = File.open("students.csv", "w")
+  @students.each do |student|
+      student_data = [student[:name], student[:cohort]]
+      csv_line = student_data.join(",")
+      file.puts csv_line
+    end
+    file.close
 end
 
 
