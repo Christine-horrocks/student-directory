@@ -46,7 +46,7 @@ def input_students
         name = STDIN.gets.chomp
       end
 end
-
+  
 
 def show_students
   print_header
