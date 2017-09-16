@@ -86,6 +86,7 @@ def save_students
       file.puts csv_line
     end
     file.close
+    puts "All student information has been saved"
 end
 
 
@@ -96,6 +97,7 @@ def load_students(filename ="students.csv")
     push_students
     end
   file.close
+  puts "Success, #{filename} has been loaded"
 end
 
 def try_load_students
